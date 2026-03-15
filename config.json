@@ -1,0 +1,16 @@
+{
+  "personal_info": {
+    "Email": "john.doe@example.com",
+    "Full name": "John Doe",
+    "College Name": "Placeholder University",
+    "Year": "Year I",
+    "Roll Number": "123",
+    "PRN": "1234567890",
+    "Branch-Division": "CS-A"
+  },
+  "browser": {
+    "headless": false,
+    "slow_mode_ms": 500,
+    "brave_binary_path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"
+  }
+}

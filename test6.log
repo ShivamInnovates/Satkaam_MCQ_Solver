@@ -1,0 +1,15 @@
+============================================================
+  Google Form Auto-Filler Bot  [BOT]
+============================================================
+[BOT] Config loaded
+[BOT] Personal info keys: ['Email', 'Full name', 'College Name', 'Year', 'Roll Number']...
+[BOT] Gemini API ready
+[BOT] Launching browser...
+[BOT] Opened: https://forms.gle/yVK962ZSBb92gfKaA
+[BOT] Browser closed. Bye!
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 503, in <module>
+    main()
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 493, in main
+    fill_form(driver, cfg, gemini_model)
+TypeError: fill_form() missing 1 required positional argument: 'gemini_model'

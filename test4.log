@@ -1,0 +1,455 @@
+C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py:31: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+============================================================
+  Google Form Auto-Filler Bot  [BOT]
+============================================================
+[BOT] Config loaded
+[BOT] Personal info keys: ['Email', 'Full name', 'College Name', 'Year', 'Roll Number']...
+[BOT] Gemini API ready
+[BOT] Launching browser...
+[BOT] Opened: https://forms.gle/yVK962ZSBb92gfKaA
+
+[BOT] Waiting for form to load...
+
+[BOT] -- Processing page 1 --
+[BOT] Found Email field but no email in config.json
+[BOT] Found 76 question block(s)
+
+  [Q] Full name- MANDATORY FOR ALL COLLEGE STUDENTS 
+*
+  [DEBUG] Dumped HTML to debug_block.html
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Full name- MANDATORY FOR ALL COLLEGE STUDENTS 
+*
+  [DEBUG] Dumped HTML to debug_block.html
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] College Name-MANDATORY FOR ALL COLLEGE STUDENTS ( Please select your specific co
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] College Name-MANDATORY FOR ALL COLLEGE STUDENTS ( Please select your specific co
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] Year-MANDATORY FOR ALL COLLEGE STUDENTS
+*
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] Year-MANDATORY FOR ALL COLLEGE STUDENTS
+*
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] Roll Number-MANDATORY FOR ALL COLLEGE STUDENTS
+*
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Roll Number-MANDATORY FOR ALL COLLEGE STUDENTS
+*
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Branch-MANDATORY ONLY FOR NON-VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [GEMINI ERROR TEXT] 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B2001:4860:4802:38::223%5D:443 {grpc_status:5, grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 84, in ask_gemini_text
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Branch-MANDATORY ONLY FOR NON-VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [GEMINI ERROR TEXT] 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B2001:4860:4802:38::223%5D:443 {grpc_status:5, grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 84, in ask_gemini_text
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Division-MANDATORY ONLY FOR NON-VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [GEMINI ERROR TEXT] 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B2001:4860:4802:38::223%5D:443 {grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.", grpc_status:5}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 84, in ask_gemini_text
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Division-MANDATORY ONLY FOR NON-VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [GEMINI ERROR TEXT] 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 276, in __call__
+    response, ignored_call = self._with_call(
+                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 331, in _with_call
+    return call.result(), call
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 438, in result
+    raise self
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_interceptor.py", line 314, in continuation
+    response, call = self._thunk(new_method).with_call(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 1173, in with_call
+    return _end_unary_response_blocking(state, call, True, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv6:%5B2001:4860:4802:38::223%5D:443 {grpc_status:5, grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 84, in ask_gemini_text
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] PRN - MANDATORY ONLY FOR VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] PRN - MANDATORY ONLY FOR VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Branch-Division- MANDATORY ONLY FOR VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] Branch-Division- MANDATORY ONLY FOR VISHWAKARMA INSTITUTE OF TECHNOLOGY STUDENTS
+  [DROPDOWN ERROR] 'charmap' codec can't encode character '\u2192' in position 22: character maps to <undefined>
+
+  [Q] An Agri-Tech startup wants to 'revolutionize' how farmers track soil health. The
+
+  [Q] An Agri-Tech startup wants to 'revolutionize' how farmers track soil health. The
+
+  [Q] You are building a smart luggage tracker. A stakeholder suggests adding a 'socia
+
+  [Q] You are building a smart luggage tracker. A stakeholder suggests adding a 'socia
+
+  [Q] A hospital wants a system to monitor patient vitals remotely. You have listed 'R
+
+  [Q] A hospital wants a system to monitor patient vitals remotely. You have listed 'R
+
+  [Q] A fintech company aims to 'increase user trust' in their new crypto-wallet. Whic
+
+  [Q] A fintech company aims to 'increase user trust' in their new crypto-wallet. Whic
+
+  [Q] During a mind-mapping session for a new EV charging station, your team is stuck 
+
+  [Q] During a mind-mapping session for a new EV charging station, your team is stuck 
+
+  [Q] You are designing a professional drone for high-altitude power line inspections.
+
+  [Q] You are designing a professional drone for high-altitude power line inspections.
+
+  [Q] A retail chain wants an AI system to 'reduce shoplifting.' They suggest installi
+
+  [Q] A retail chain wants an AI system to 'reduce shoplifting.' They suggest installi
+
+  [Q] Your team is building a 'Smart Waste Bin' for smart cities. An engineer wants to
+
+  [Q] Your team is building a 'Smart Waste Bin' for smart cities. An engineer wants to
+
+  [Q] A logistics company notices their truck drivers are ignoring a new 'Fuel Efficie
+
+  [Q] A logistics company notices their truck drivers are ignoring a new 'Fuel Efficie
+
+  [Q] You are designing an automated library kiosk. You add a requirement that 'The ki
+
+  [Q] You are designing an automated library kiosk. You add a requirement that 'The ki
+
+  [Q] An insurance firm wants to 'Automate Claims' to save money. If you follow the Wh
+
+  [Q] An insurance firm wants to 'Automate Claims' to save money. If you follow the Wh
+
+  [Q] A team lead says, 'We don't need a Mind Map; we already have a list of features.
+
+  [Q] A team lead says, 'We don't need a Mind Map; we already have a list of features.
+
+  [Q] In a 'Smart Home' project, you realize that if the cloud server goes down, the u
+
+  [Q] In a 'Smart Home' project, you realize that if the cloud server goes down, the u
+
+  [Q] You are building a fitness wearable. The 'Why' is to 'improve heart health.' The
+
+  [Q] You are building a fitness wearable. The 'Why' is to 'improve heart health.' The
+
+  [Q] A CEO wants a 'World Class' user experience for a new banking app. How do you ma
+
+  [Q] A CEO wants a 'World Class' user experience for a new banking app. How do you ma
+
+  [Q] You are creating an MVP for a 'Smart Irrigation' system. Your list includes: 1. 
+
+  [Q] You are creating an MVP for a 'Smart Irrigation' system. Your list includes: 1. 
+
+  [Q] An engineer argues that 'Configurability' is a waste of time and everything shou
+
+  [Q] An engineer argues that 'Configurability' is a waste of time and everything shou
+
+  [Q] A 'Smart Warehouse' robot is designed to move boxes. A functional requirement is
+
+  [Q] A 'Smart Warehouse' robot is designed to move boxes. A functional requirement is
+
+  [Q] When moving from 'How' to 'What,' a conflict arises: the desired UX requires a s
+
+  [Q] When moving from 'How' to 'What,' a conflict arises: the desired UX requires a s
+
+  [Q] A 'Restaurant POS' system is failing because waiters find the screen too bright 
+
+  [Q] A 'Restaurant POS' system is failing because waiters find the screen too bright 
+
+  [Q] You are solutioning a 'Disaster Management' drone. The primary goal is 'Find sur
+
+  [Q] You are solutioning a 'Disaster Management' drone. The primary goal is 'Find sur
+
+  [Q] In the Why-How-What framework, which part is most susceptible to the 'Agile Myth
+
+  [Q] In the Why-How-What framework, which part is most susceptible to the 'Agile Myth
+
+  [Q] A 'Smart Greenhouse' system has a functional requirement to 'Regulate Temperatur
+
+  [Q] A 'Smart Greenhouse' system has a functional requirement to 'Regulate Temperatur
+
+  [Q] You are designing a 'Fleet Tracking' system for a taxi company. If you focus onl
+
+  [Q] You are designing a 'Fleet Tracking' system for a taxi company. If you focus onl
+
+  [Q] A company wants to 'Reduce Customer Support Calls' by 30%. You propose a 'Self-S
+
+  [Q] A company wants to 'Reduce Customer Support Calls' by 30%. You propose a 'Self-S
+
+  [Q] A 'Smart Water Meter' must be installed in dark, underground pits. The UI team s
+
+  [Q] A 'Smart Water Meter' must be installed in dark, underground pits. The UI team s
+
+  [Q] During solutioning for a 'Micro-Grid' power system, you prioritize 'Security' ov
+
+  [Q] During solutioning for a 'Micro-Grid' power system, you prioritize 'Security' ov
+
+  [Q] What is the primary difference between a 'Functional Requirement' and an 'NFR' i
+
+  [Q] What is the primary difference between a 'Functional Requirement' and an 'NFR' i
+
+  [Q] You are at the end of the 'Functional Breakdown' and have 100 features. The budg
+
+  [Q] You are at the end of the 'Functional Breakdown' and have 100 features. The budg
+
+  [Q] Why does the methodology suggest that Solutioning is 'iterative' rather than a '
+
+  [Q] Why does the methodology suggest that Solutioning is 'iterative' rather than a '
+[BOT] Browser closed. Bye!
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 497, in <module>
+    main()
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 487, in main
+    fill_form(driver, cfg, gemini_model)
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 210, in fill_form
+    print("\n[BOT] \u2705 All questions filled!")
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 8: character maps to <undefined>

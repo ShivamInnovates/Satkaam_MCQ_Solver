@@ -1,0 +1,55 @@
+DEBUG:selenium.webdriver.common.selenium_manager:Selenium Manager binary found at: C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+DEBUG:selenium.webdriver.common.selenium_manager:Executing process: C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --browser-path C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe --debug --language-binding python --output json
+DEBUG:selenium.webdriver.common.selenium_manager:chromedriver not found in PATH
+DEBUG:selenium.webdriver.common.selenium_manager:Detected browser: chrome 146.1.88.132
+DEBUG:selenium.webdriver.common.selenium_manager:Required driver: chromedriver 146.0.7680.80
+DEBUG:selenium.webdriver.common.selenium_manager:chromedriver 146.0.7680.80 already in the cache
+DEBUG:selenium.webdriver.common.selenium_manager:Driver path: C:\Users\anura\.cache\selenium\chromedriver\win64\146.0.7680.80\chromedriver.exe
+DEBUG:selenium.webdriver.common.selenium_manager:Browser path: C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
+DEBUG:selenium.webdriver.common.service:Started executable: `C:\Users\anura\.cache\selenium\chromedriver\win64\146.0.7680.80\chromedriver.exe` in a child process with pid: 37484 using 0 to output -3
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:61954/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'excludeSwitches': ['enable-automation'], 'useAutomationExtension': False, 'extensions': [], 'binary': 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe', 'args': ['--no-sandbox', '--disable-dev-shm-usage', '--window-size=1200,900', '--disable-blink-features=AutomationControlled']}}}}
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:61954
+DEBUG:urllib3.connectionpool:http://localhost:61954 "POST /session HTTP/1.1" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.80","chrome":{"chromedriverVersion":"146.0.7680.80 (f08938029c887ea624da7a1717059788ed95034d-refs/branch-heads/7680_65@{#34})","userDataDir":"C:\\Users\\anura\\AppData\\Local\\Temp\\scoped_dir37484_964163189"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:61957"},"goog:processID":37156,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8c71175d504dc88f4f307e552405b13d"}} | headers=HTTPHeaderDict({'Content-Length': '905', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:61954/session/8c71175d504dc88f4f307e552405b13d/url {'url': 'https://forms.gle/yVK962ZSBb92gfKaA'}
+DEBUG:urllib3.connectionpool:http://localhost:61954 "POST /session/8c71175d504dc88f4f307e552405b13d/url HTTP/1.1" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:POST http://localhost:61954/session/8c71175d504dc88f4f307e552405b13d/element {'using': 'css selector', 'value': 'div[data-params], div.Qr7Oae, div.freebirdFormviewerComponentsQuestionBaseRoot'}
+DEBUG:urllib3.connectionpool:http://localhost:61954 "POST /session/8c71175d504dc88f4f307e552405b13d/element HTTP/1.1" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.AB20A07D075F7B3D391C041D4DBA42BE.d.E6849DD43DB3161C52ECD7CAF16463C2.e.156"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+DEBUG:selenium.webdriver.remote.remote_connection:DELETE http://localhost:61954/session/8c71175d504dc88f4f307e552405b13d {}
+DEBUG:urllib3.connectionpool:http://localhost:61954 "DELETE /session/8c71175d504dc88f4f307e552405b13d HTTP/1.1" 200 0
+DEBUG:selenium.webdriver.remote.remote_connection:Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+DEBUG:selenium.webdriver.remote.remote_connection:Finished Request
+C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py:31: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+============================================================
+  Google Form Auto-Filler Bot  [BOT]
+============================================================
+[BOT] Config loaded
+[BOT] Personal info keys: ['Email', 'Full name', 'College Name', 'Year', 'Roll Number']...
+[BOT] Gemini API ready
+[BOT] Launching browser...
+[BOT] Opened: https://forms.gle/yVK962ZSBb92gfKaA
+
+[BOT] Waiting for form to load...
+[BOT] Browser closed. Bye!
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 487, in main
+    fill_form(driver, cfg, gemini_model)
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 168, in fill_form
+      File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 8-9: character maps to <undefined>

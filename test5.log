@@ -1,0 +1,70 @@
+C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py:31: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+============================================================
+  Google Form Auto-Filler Bot  [BOT]
+============================================================
+[BOT] Config loaded
+[BOT] Personal info keys: ['Email', 'Full name', 'College Name', 'Year', 'Roll Number']...
+[BOT] Gemini API ready
+[BOT] Launching browser...
+[BOT] Opened: https://forms.gle/yVK962ZSBb92gfKaA
+
+[BOT] Waiting for form to load...
+
+[BOT] -- Processing page 1 --
+[BOT] Found Email field but no email in config.json
+[BOT] Found 76 question block(s)
+
+  [Q] Full name- MANDATORY FOR ALL COLLEGE STUDENTS 
+*
+  [DEBUG] Dumped HTML to debug_block.html
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] Full name- MANDATORY FOR ALL COLLEGE STUDENTS 
+*
+  [DEBUG] Dumped HTML to debug_block.html
+  [WARN] Could not process a block: 'charmap' codec can't encode character '\u2192' in position 13: character maps to <undefined>
+
+  [Q] College Name-MANDATORY FOR ALL COLLEGE STUDENTS ( Please select your specific co
+  [DROPDOWN ERROR] Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.80)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e59710a5+14cc5]
+	chromedriver!GetHandleVerifier [0x7ff6e5971110+14d30]
+	chromedriver!(No symbol) [0x7ff6e56ddb6d]
+	chromedriver!(No symbol) [0x7ff6e56b4352]
+	chromedriver!(No symbol) [0x7ff6e5767256]
+	chromedriver!(No symbol) [0x7ff6e5783862]
+	chromedriver!(No symbol) [0x7ff6e57296e8]
+	chromedriver!(No symbol) [0x7ff6e572a5d3]
+	chromedriver!GetHandleVerifier [0x7ff6e5c75ddd+3199fd]
+	chromedriver!GetHandleVerifier [0x7ff6e5c704bd+3140dd]
+	chromedriver!GetHandleVerifier [0x7ff6e5c929ba+3365da]
+	chromedriver!GetHandleVerifier [0x7ff6e598ca45+30665]
+	chromedriver!GetHandleVerifier [0x7ff6e5995b9c+397bc]
+	chromedriver!GetHandleVerifier [0x7ff6e597a4c4+1e0e4]
+	chromedriver!GetHandleVerifier [0x7ff6e597a676+1e296]
+	chromedriver!GetHandleVerifier [0x7ff6e595ef87+2ba7]
+	KERNEL32!BaseThreadInitThunk [0x7fff1fbfe8d7+17]
+	ntdll!RtlUserThreadStart [0x7fff20aac48c+2c]
+
+[BOT] Browser closed. Bye!
+Traceback (most recent call last):
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 497, in <module>
+    main()
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 487, in main
+    fill_form(driver, cfg, gemini_model)
+  File "C:\Users\anura\Desktop\Satkaam_MCQ_Solver\form_bot.py", line 210, in fill_form
+    print("\n[BOT] \u2705 All questions filled!")
+  File "C:\Users\anura\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 8: character maps to <undefined>
