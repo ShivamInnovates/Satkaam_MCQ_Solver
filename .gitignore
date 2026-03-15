@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.log
+debug_block.html
+dropdown_debug.html
+email_debug.html
+html_dump.html
+test_output.txt
+*.pyc
